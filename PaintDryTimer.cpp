@@ -1,3 +1,6 @@
+// Programmer: Walter Cordero
+// This is my 6th c++ program
+
 #include <ctime> // for time(0)
 #include <iostream> // for cin and cout
 #include <cmath> // for M_PI and others
@@ -136,7 +139,7 @@ int main() {
     vector<DryingSnapShot> batches;
     char option;
 
-    tests(); // Run the tests before continuing with the main menu
+    tests(); //runs tests
     
     while (true) {
         cout << "Choose an option: (A)dd, (V)iew Current Items, (Q)uit: ";
@@ -154,7 +157,7 @@ int main() {
             cout << "Invalid option, please try again." << endl;
         }
         
-        // Track drying progress and display it
+        // tracks and outputs drying progress 
         for (auto& batch : batches) {
             long long int timeRemaining = get_time_remaining(batch);
             if (timeRemaining > 0) {
@@ -164,7 +167,7 @@ int main() {
             }
         }
         
-        // Sleep for 1 second before the next iteration
+        
         this_thread::sleep_for(chrono::seconds(1));
     }
 
