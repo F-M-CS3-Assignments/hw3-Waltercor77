@@ -119,7 +119,7 @@ bool TimeCode::operator > (const TimeCode& other) const{
 
 //checks if one of them is more than or equal to the other 
 bool TimeCode::operator >= (const TimeCode& other) const{
-    return t > other.t;
+    return t >= other.t;
 }
 
 
